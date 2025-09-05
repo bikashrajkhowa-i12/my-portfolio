@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import ContactButtons from "./ContactButtons";
 
 function Sidebar() {
   const [selectedLink, setSelectedLink] = useState("#about");
@@ -18,7 +19,7 @@ function Sidebar() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="absolute top-16 right-8 hidden lg:flex flex-col items-start justify-between p-4 gap-20"
+      className="absolute top-16 right-16 hidden lg:flex flex-col items-start justify-between p-4 gap-20"
     >
       <div className="space-y-2">
         <h1 className="text-4xl font-semibold tracking-tight">
@@ -54,6 +55,9 @@ function Sidebar() {
             </div>
           );
         })}
+      </div>
+      <div className="pt-40">
+        <ContactButtons />
       </div>
     </motion.div>
   );

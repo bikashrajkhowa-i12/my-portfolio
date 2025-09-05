@@ -37,7 +37,7 @@ function Skills() {
       <p className="mb-4">
         A snapshot of the tools and technologies I use in my projects:
       </p>
-      <div className="grid grid-cols-4 border bg-gradient-to-br from-slate-800 via-gray-700 to-cyan-900 border-gray-800 rounded-sm gap-5 py-6">
+      <div className="grid grid-cols-4 border border-gray-800/50 rounded-sm gap-5 py-6">
         {skills.map((skill, idx) => {
           return (
             <div key={idx} className="flex flex-col items-center gap-2">

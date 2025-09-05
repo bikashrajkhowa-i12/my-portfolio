@@ -4,7 +4,7 @@ import { FiUser } from "react-icons/fi";
 
 function About() {
   return (
-    <div id="about" className="pt-20 min-h-95 lg:h-auto prose">
+    <div id="about" className="pt-20 min-h-95 lg:h-auto">
       <div className="flex gap-4">
         <FiUser size={34} className="mt-0.5" />
         <h1 className="text-2xl lg:text-3xl font-bold mb-6 tracking-tight">

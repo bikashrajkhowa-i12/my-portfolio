@@ -21,8 +21,17 @@ function Experience() {
         { name: "Serverless", link: "https://www.serverless.com/" },
         { name: "AWS", link: "https://aws.amazon.com/" },
       ],
-      work_desc:
-        "Spearheaded the beta rollout of the quotation and order management system, optimizing sales request handling and payment processing workflows for the team. Designed and integrated modules and microservices to enhance system functionality, reliability, and scalability. Translated complex business requirements into efficient, timely solutions while continuously refining and optimizing code to elevate overall system performance and quality.",
+      work_desc: (
+        <>
+          Spearheaded the beta rollout of the quotation and order management
+          system, optimizing sales request handling and payment processing
+          workflows for the team. Designed and integrated modules and
+          microservices to enhance system functionality, reliability, and
+          scalability. Translated complex business requirements into efficient,
+          timely solutions while continuously refining and optimizing code to
+          elevate overall system performance and quality.
+        </>
+      ),
     },
     {
       duration: "2021-2022",
@@ -40,10 +49,25 @@ function Experience() {
         { name: "Express", link: "https://expressjs.com/" },
         { name: "Serverless", link: "https://www.serverless.com/" },
       ],
-      work_desc:
-        "Contributed to the development and maintenance of BYJU’s core “KART” order-punching system. Built and optimized web pages and RESTful APIs, leading the migration of services to a serverless architecture. Implemented rapid data-fix and database migration scripts to efficiently manage large-scale datasets and streamline database operations.",
+      work_desc: (
+        <>
+          Contributed to the development and maintenance of BYJU’s core{" "}
+          <strong className="group-hover:text-gray-200/90 font-medium">
+            “KART”
+          </strong>{" "}
+          order-punching system. Built and optimized web pages and RESTful APIs,
+          leading the migration of services to a{" "}
+          <strong className="group-hover:text-gray-200/90 font-medium">
+            serverless architecture
+          </strong>
+          . Implemented rapid data-fix and database migration scripts to
+          efficiently manage large-scale datasets and streamline database
+          operations.
+        </>
+      ),
     },
   ];
+
   return (
     <div id="experience" className="pt-20 min-h-95 lg:h-auto">
       <div className="flex gap-4">
@@ -52,30 +76,37 @@ function Experience() {
           Experience
         </h1>
       </div>
+
       <div className="max-w-3xl space-y-16 md:space-y-4">
         {workExp.map((work, idx) => (
           <div
             key={idx}
-            className="flex flex-col md:flex-row md:gap-15 opacity-90 group hover:opacity-100 hover:bg-slate-800/40 md:p-6 rounded-md hover:shadow-lg transition-all duration-200 ease-out"
+            className="flex flex-col md:flex-row md:gap-15 opacity-80 group hover:opacity-100 hover:bg-slate-800/40 md:p-6 rounded-md hover:shadow-lg transition-all duration-200 ease-out hover:cursor-pointer"
           >
-            <h1 className="text-xs font-semibold text-gray-600 w-1/4 mt-2">
+            {/* Duration */}
+            <h2 className="text-xs font-semibold text-gray-600 w-1/4 mt-2">
               {work.duration}
-            </h1>
+            </h2>
 
+            {/* Content */}
             <div className="flex flex-col justify-start w-full">
-              <h1 className="text-lg font-medium text-gray-200 group-hover:text-teal-300">
+              <h3 className="text-lg font-medium text-gray-200 group-hover:text-teal-300">
                 {work.role} • {work.org}
-              </h1>
-              <p className="text-sm font-medium mt-2 lg:mt-4">
+              </h3>
+
+              <div className="text-sm font-medium mt-2 lg:mt-4 leading-relaxed">
                 {work.work_desc}
-              </p>
+              </div>
+
+              {/* Tools */}
               <div className="flex flex-wrap gap-2 mt-4">
                 {work.tools.map((tool, i) => (
                   <a
                     href={tool.link}
                     target="_blank"
+                    rel="noopener noreferrer"
                     key={i}
-                    className="px-3 py-0.5 rounded-full bg-cyan-900/30 text-teal-300 text-xs"
+                    className="px-3 py-0.5 rounded-full bg-teal-900/30 text-teal-300 text-xs"
                   >
                     {tool.name}
                   </a>

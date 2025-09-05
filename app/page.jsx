@@ -8,11 +8,10 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import { ChevronRight } from "lucide-react";
-import { useAppContext } from "@/context/AppContext";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [slideScreen, setSlideScreen] = useState(false);
-  const { isOpenModal = false, setIsOpenModal } = useAppContext();
 
   const mainBgColor = `bg-slate-900`;
 
@@ -35,6 +34,7 @@ export default function Home() {
           <Skills />
           <Experience />
           <Projects />
+          <Footer />
         </section>
       </main>
     </>

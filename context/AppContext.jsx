@@ -8,11 +8,11 @@ export const ContextProvider = ({ children }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const openModal = () => {
-    setIsOpenModal(!isOpenModal);
+    setIsOpenModal(true);
   };
 
   const closeModal = () => {
-    setIsOpenModal(!isOpenModal);
+    setIsOpenModal(false);
   };
 
   return (
