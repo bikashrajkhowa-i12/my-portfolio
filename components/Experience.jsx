@@ -81,7 +81,7 @@ function Experience() {
         {workExp.map((work, idx) => (
           <div
             key={idx}
-            className="flex flex-col md:flex-row md:gap-15 opacity-80 group hover:opacity-100 hover:bg-slate-800/40 md:p-6 rounded-md hover:shadow-lg transition-all duration-200 ease-out hover:cursor-pointer"
+            className="flex flex-col md:flex-row md:gap-15 opacity-80 group hover:opacity-100 md:p-6 rounded-md hover:shadow-lg transition-all duration-200 ease-out hover:cursor-pointer hover:bg-gradient-to-br from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:shadow-lg"
           >
             {/* Duration */}
             <h2 className="text-xs font-semibold text-gray-600 w-1/4 mt-2">

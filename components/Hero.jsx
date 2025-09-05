@@ -19,9 +19,6 @@ function Hero({ slideScreen, setSlideScreen }) {
             : "tanslate-x-0"
         }`}
     >
-      <div className="absolute top-2 left-4 font-bold tracking-tight">
-        Bikash | Portfolio
-      </div>
       {!slideScreen && (
         <motion.div
           initial="hidden"
