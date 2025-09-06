@@ -7,6 +7,7 @@ const AppContext = createContext();
 export const ContextProvider = ({ children }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [screenshots, setScreenshots] = useState([]);
+  const [websiteUrl, setWebsiteUrl] = useState(null);
 
   const openModal = () => {
     setIsOpenModal(true);
@@ -26,6 +27,8 @@ export const ContextProvider = ({ children }) => {
         setIsOpenModal,
         screenshots,
         setScreenshots,
+        websiteUrl,
+        setWebsiteUrl,
       }}
     >
       {children}

@@ -3,6 +3,7 @@ import React from "react";
 
 import { useAppContext } from "@/context/AppContext";
 import { FiBriefcase } from "react-icons/fi";
+import { MdArrowOutward } from "react-icons/md";
 
 function Projects() {
   const { openModal, setScreenshots } = useAppContext();
@@ -49,7 +50,7 @@ function Projects() {
         "/projects/handipro/3.jpg",
       ],
       alt: "Handipro preview",
-      desc: "Handipro is a football market insight app for beginners. Built with React and React-Bootstrap with a clean, responsive design showing popular betting markets.",
+      desc: "Handipro is a football market insight app for beginners. Built with React and React-Bootstrap with a clean, responsive design showing popular football markets.",
       tools: [
         { name: "React", link: "https://react.dev/" },
         {
@@ -110,7 +111,7 @@ function Projects() {
                 openModal();
                 setScreenshots(project.screenshots);
               }}
-              className="flex flex-col md:flex-row md:gap-8 group opacity-80 hover:opacity-100 transition-all duration-200 ease-out cursor-pointer md:p-6 rounded-md hover:bg-gradient-to-b from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:shadow-lg"
+              className="flex flex-col md:flex-row md:gap-8 group opacity-80 hover:opacity-100 transition-all duration-200 ease-out cursor-pointer md:p-6 rounded-md hover:md:bg-gradient-to-b from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:md:shadow-lg"
             >
               {/* Image */}
               <div className="hidden md:block mt-2 w-2/6">
@@ -123,9 +124,16 @@ function Projects() {
 
               {/* Content */}
               <div className="flex flex-col justify-start w-full">
-                <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300">
-                  {project.title}
-                </h2>
+                <div className="flex gap-1.5 justify-start items-center group">
+                  <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
+                    {project.title}
+                  </h2>
+                  <MdArrowOutward className="mt-1 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
+                  <span className="px-3 py-0.5 rounded-full bg-transparent text-gray-300 underline text-xs md:hidden">
+                    Preview
+                  </span>
+                </div>
+
                 <p className="text-sm font-medium mt-1">{project.desc}</p>
 
                 {/* Tools */}
@@ -134,6 +142,7 @@ function Projects() {
                     <a
                       key={i}
                       href={tool.link}
+                      onClick={(e) => e.stopPropagation()}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-0.5 rounded-full bg-teal-900/30 text-teal-300 text-xs"

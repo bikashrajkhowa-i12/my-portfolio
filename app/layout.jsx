@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ContextProvider } from "@/context/AppContext";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -25,6 +26,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Toaster
+          toastOptions={{
+            className: "backdrop-blur-sm",
+          }}
+        />
         <ContextProvider>{children}</ContextProvider>
       </body>
     </html>

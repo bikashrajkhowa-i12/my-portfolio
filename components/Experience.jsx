@@ -1,5 +1,6 @@
 import React from "react";
 import { FiBriefcase } from "react-icons/fi";
+import { MdArrowOutward } from "react-icons/md";
 
 function Experience() {
   const workExp = [
@@ -7,6 +8,7 @@ function Experience() {
       duration: "2022-2023",
       role: "Software Engineer",
       org: "BYJU's",
+      org_website: "https://byjus.com",
       tools: [
         { name: "React", link: "https://react.dev/" },
         { name: "Next.js", link: "https://nextjs.org/" },
@@ -37,6 +39,7 @@ function Experience() {
       duration: "2021-2022",
       role: "Associate Software Engineer",
       org: "BYJU's",
+      org_website: "https://byjus.com",
       tools: [
         { name: "React", link: "https://react.dev/" },
         {
@@ -79,9 +82,11 @@ function Experience() {
 
       <div className="max-w-3xl space-y-16 md:space-y-4">
         {workExp.map((work, idx) => (
-          <div
+          <a
+            href={work.org_website}
+            target="_blank"
             key={idx}
-            className="flex flex-col md:flex-row md:gap-15 opacity-80 group hover:opacity-100 md:p-6 rounded-md hover:shadow-lg transition-all duration-200 ease-out hover:cursor-pointer hover:bg-gradient-to-br from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:shadow-lg"
+            className="flex flex-col md:flex-row md:gap-15 opacity-80 group hover:opacity-100 md:p-6 rounded-md hover:md:shadow-lg transition-all duration-200 ease-out hover:cursor-pointer hover:md:bg-gradient-to-br from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:md:shadow-lg"
           >
             {/* Duration */}
             <h2 className="text-xs font-semibold text-gray-600 w-1/4 mt-2">
@@ -90,9 +95,12 @@ function Experience() {
 
             {/* Content */}
             <div className="flex flex-col justify-start w-full">
-              <h3 className="text-lg font-medium text-gray-200 group-hover:text-teal-300">
-                {work.role} • {work.org}
-              </h3>
+              <div className="flex gap-2 justify-start items-center group">
+                <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
+                  {work.role} • {work.org}
+                </h2>
+                <MdArrowOutward className="mt-1 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
+              </div>
 
               <div className="text-sm font-medium mt-2 lg:mt-4 leading-relaxed">
                 {work.work_desc}
@@ -101,19 +109,17 @@ function Experience() {
               {/* Tools */}
               <div className="flex flex-wrap gap-2 mt-4">
                 {work.tools.map((tool, i) => (
-                  <a
-                    href={tool.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <span
                     key={i}
+                    onClick={() => window.open(tool.link, "_blank")}
                     className="px-3 py-0.5 rounded-full bg-teal-900/30 text-teal-300 text-xs"
                   >
                     {tool.name}
-                  </a>
+                  </span>
                 ))}
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

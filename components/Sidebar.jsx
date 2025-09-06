@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ContactButtons from "./ContactButtons";
+
+import GetInTouch from "./GetInTouch";
 
 function Sidebar() {
   const [selectedLink, setSelectedLink] = useState("#about");
@@ -56,8 +57,8 @@ function Sidebar() {
           );
         })}
       </div>
-      <div className="pt-40">
-        <ContactButtons />
+      <div className="pt-50">
+        <GetInTouch />
       </div>
     </motion.div>
   );
