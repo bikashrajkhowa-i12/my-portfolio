@@ -7,6 +7,7 @@ function ContactButtons() {
     <div className="flex flex-col items-center justify-center gap-5">
       <div className="flex justify-between gap-4">
         <a
+          aria-label="Visit Github Profile"
           href="https://github.com/bikashrajkhowa-i12"
           title="Github"
           target="_blank"
@@ -18,6 +19,7 @@ function ContactButtons() {
           />
         </a>
         <a
+          aria-label="Visit LinkedIn Profile"
           href="https://www.linkedin.com/in/bikash-rajkhowa-857a191a6/"
           title="Linkedin"
           target="_blank"
@@ -29,6 +31,7 @@ function ContactButtons() {
           />
         </a>
         <a
+          aria-label="Visit Instagram Profile"
           href="https://www.instagram.com/_.bikashrajkhowa/"
           title="Instagram"
           target="_blank"

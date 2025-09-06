@@ -140,6 +140,7 @@ function Projects() {
                 <div className="text-sm font-medium mt-3 flex flex-wrap gap-2">
                   {project.tools.map((tool, i) => (
                     <a
+                      aria-label="Visit external-website link"
                       key={i}
                       href={tool.link}
                       onClick={(e) => e.stopPropagation()}

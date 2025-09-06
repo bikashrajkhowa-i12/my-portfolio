@@ -117,114 +117,118 @@ function Footer() {
     }
   };
 
+  //TODO: Remove redundant tags (later)
   return (
-    <footer id="footer" className="pt-20 min-h-95 lg:h-auto bg-inherit">
-      <div className="max-w-3xl mx-auto px-2 py-16 grid md:grid-cols-2 gap-12">
-        {/* Intro + Social Links */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-200">Get in Touch</h2>
-          <p className="text-gray-400">
-            Your message is always welcome. Reach out or connect with me through
-            social links below.
-          </p>
+    <section id="discover" className="min-h-screen flex flex-col xl:pl-80">
+      <div className="pt-20 min-h-95 lg:h-auto bg-inherit">
+        <div className="max-w-3xl mx-auto px-2 py-16 grid md:grid-cols-2 gap-12">
+          {/* Intro + Social Links */}
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-gray-200">Get in Touch</h2>
+            <p className="text-gray-400">
+              Your message is always welcome. Reach out or connect with me
+              through social links below.
+            </p>
 
-          {/* Social Links */}
-          <div className="pl-13 w-10">
-            <ContactButtons />
+            {/* Social Links */}
+            <div className="pl-13 w-10">
+              <ContactButtons />
+            </div>
+          </div>
+
+          {/* Contact Form */}
+
+          <div className="bg-slate-800 p-8 rounded-xl shadow-lg">
+            {msgSent ? (
+              <MsgSentComp resend={() => setMsgSent(false)} />
+            ) : (
+              <>
+                <h2 className="text-xl font-bold text-gray-200 mb-6">
+                  Send a Message
+                </h2>
+                <form ref={formRef} className="space-y-4">
+                  <div className="flex flex-col">
+                    <Label
+                      htmlFor="name"
+                      className="text-gray-300 font-medium mb-1"
+                    >
+                      Name
+                    </Label>
+                    <Input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required={true}
+                      placeholder="Your Name"
+                      className="bg-slate-700 text-gray-200 p-3 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal-300 transition-all duration-200"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <Label
+                      htmlFor="email"
+                      className="text-gray-300 font-medium mb-1"
+                    >
+                      Email
+                    </Label>
+                    <Input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required={true}
+                      placeholder="Your email"
+                      className="bg-slate-700 text-gray-200 p-3 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal-300 transition-all duration-200"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <Label
+                      htmlFor="message"
+                      className="text-gray-300 font-medium mb-1"
+                    >
+                      Message
+                    </Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      required={true}
+                      rows={5}
+                      placeholder="Share your thoughts, questions or feedback"
+                      className="bg-slate-700 text-gray-200 p-3 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal-300 transition-all duration-200"
+                    ></Textarea>
+                  </div>
+
+                  <Button
+                    aria-label="Send Message"
+                    type="submit"
+                    disabled={loading}
+                    onClick={(e) => onClickSend(e)}
+                    className="w-full bg-teal-500 hover:bg-teal-600 text-gray-900 font-bold py-3 rounded-md mt-2 transition-colors duration-200"
+                  >
+                    {loading ? (
+                      <>
+                        <Loader2Icon className="animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send
+                        <Send />
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </>
+            )}
           </div>
         </div>
 
-        {/* Contact Form */}
-
-        <div className="bg-slate-800 p-8 rounded-xl shadow-lg">
-          {msgSent ? (
-            <MsgSentComp resend={() => setMsgSent(false)} />
-          ) : (
-            <>
-              <h2 className="text-xl font-bold text-gray-200 mb-6">
-                Send a Message
-              </h2>
-              <form ref={formRef} className="space-y-4">
-                <div className="flex flex-col">
-                  <Label
-                    htmlFor="name"
-                    className="text-gray-300 font-medium mb-1"
-                  >
-                    Name
-                  </Label>
-                  <Input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required={true}
-                    placeholder="Your Name"
-                    className="bg-slate-700 text-gray-200 p-3 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal-300 transition-all duration-200"
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  <Label
-                    htmlFor="email"
-                    className="text-gray-300 font-medium mb-1"
-                  >
-                    Email
-                  </Label>
-                  <Input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required={true}
-                    placeholder="Your email"
-                    className="bg-slate-700 text-gray-200 p-3 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal-300 transition-all duration-200"
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  <Label
-                    htmlFor="message"
-                    className="text-gray-300 font-medium mb-1"
-                  >
-                    Message
-                  </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required={true}
-                    rows={5}
-                    placeholder="Share your thoughts, questions or feedback"
-                    className="bg-slate-700 text-gray-200 p-3 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal-300 transition-all duration-200"
-                  ></Textarea>
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={loading}
-                  onClick={(e) => onClickSend(e)}
-                  className="w-full bg-teal-500 hover:bg-teal-600 text-gray-900 font-bold py-3 rounded-md mt-2 transition-colors duration-200"
-                >
-                  {loading ? (
-                    <>
-                      <Loader2Icon className="animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      Send
-                      <Send />
-                    </>
-                  )}
-                </Button>
-              </form>
-            </>
-          )}
+        {/* Bottom Footer */}
+        <div className="border-t border-cyan-900/20 mt-12 py-6 text-center text-gray-500 text-sm">
+          &copy; {new Date().getFullYear()} Bikash Rajkhowa.
         </div>
       </div>
-
-      {/* Bottom Footer */}
-      <div className="border-t border-cyan-900/20 mt-12 py-6 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Bikash Rajkhowa.
-      </div>
-    </footer>
+    </section>
   );
 }
 
@@ -239,6 +243,7 @@ const MsgSentComp = ({ resend }) => {
         Thanks for reaching out.{" "}
       </h2>
       <Button
+        aria-label="Send another message"
         onClick={resend}
         className="w-full bg-teal-500 hover:bg-teal-600 text-gray-900 font-bold py-3 rounded-md mt-2 transition-colors duration-200"
       >

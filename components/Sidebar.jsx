@@ -45,6 +45,7 @@ function Sidebar() {
               />
 
               <a
+                aria-label="Scroll to the selected value"
                 href={link.href}
                 onClick={() => setSelectedLink(link.href)}
                 className={`text-xs font-bold transition-all duration-200 hover:text-cyan-300 tracking-widest ${

@@ -55,6 +55,7 @@ function Hero({ slideScreen, setSlideScreen }) {
           <div className="mt-16 flex justify-center">
             <a href="#about" aria-label="Scroll to Discover section">
               <Button
+                aria-label="Discover portfolio button"
                 onClick={() => setSlideScreen(!slideScreen)}
                 variant="outline"
                 className="bg-transparent rounded-lg text-md p-4 md:p-5 font-semibold "
