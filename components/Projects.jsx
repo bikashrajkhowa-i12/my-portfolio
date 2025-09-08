@@ -102,7 +102,7 @@ function Projects() {
         </h1>
       </div>
 
-      <div className="max-w-3xl space-y-8">
+      <div className="max-w-3xl space-y-12 md:space-y-8">
         {projects.map((project, idx) => {
           return (
             <div
@@ -152,6 +152,14 @@ function Projects() {
                     </a>
                   ))}
                 </div>
+              </div>
+
+              <div className="flex md:hidden mt-2 h-25 w-45 mt-4">
+                <img
+                  src={project.img}
+                  alt={project.alt}
+                  className="object-cover h-full w-full rounded-sm border-1 border-cyan-600/50"
+                />
               </div>
             </div>
           );

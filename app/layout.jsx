@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0ea5b6",
+  themeColor: "#0f172a",
 };
 
 export const metadata = {
@@ -79,7 +79,6 @@ export const metadata = {
       follow: true,
     },
   },
-  themeColor: "#0ee8b1",
 };
 
 export default function RootLayout({ children }) {

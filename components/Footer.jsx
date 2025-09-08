@@ -117,10 +117,9 @@ function Footer() {
     }
   };
 
-  //TODO: Remove redundant tags (later)
   return (
-    <section id="discover" className="min-h-screen flex flex-col xl:pl-80">
-      <div className="pt-20 min-h-95 lg:h-auto bg-inherit">
+    <section id="discover" className="flex flex-col xl:pl-80">
+      <div className="pt-20 h-auto bg-inherit">
         <div className="max-w-3xl mx-auto px-2 py-16 grid md:grid-cols-2 gap-12">
           {/* Intro + Social Links */}
           <div className="space-y-6">
@@ -193,7 +192,7 @@ function Footer() {
                       name="message"
                       required={true}
                       rows={5}
-                      placeholder="Share your thoughts, questions or feedback"
+                      placeholder="Write your message..."
                       className="bg-slate-700 text-gray-200 p-3 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal-300 transition-all duration-200"
                     ></Textarea>
                   </div>
