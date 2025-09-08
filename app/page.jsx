@@ -37,7 +37,6 @@ export default function Home() {
             </div>
           </div>
           <About />
-          <Skills />
           <Experience />
           <Projects />
         </section>

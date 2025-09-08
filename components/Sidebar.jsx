@@ -10,7 +10,6 @@ function Sidebar() {
 
   const links = [
     { name: "ABOUT", href: "#about" },
-    { name: "SKILLS", href: "#skills" },
     { name: "EXPERIENCE", href: "#experience" },
     { name: "PROJECTS", href: "#projects" },
   ];

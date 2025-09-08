@@ -1,5 +1,5 @@
 import React from "react";
-import { FiBriefcase } from "react-icons/fi";
+
 import { MdArrowOutward } from "react-icons/md";
 
 function Experience() {
@@ -73,12 +73,9 @@ function Experience() {
 
   return (
     <div id="experience" className="pt-20 min-h-95 lg:h-auto">
-      <div className="flex gap-4">
-        <FiBriefcase size={34} className="mt-0.5" />
-        <h1 className="text-2xl lg:text-3xl font-bold mb-6 tracking-tight">
-          Experience
-        </h1>
-      </div>
+      <h1 className="text-2xl lg:text-3xl font-bold mb-6 tracking-tight">
+        Experience
+      </h1>
 
       <div className="max-w-3xl space-y-16 md:space-y-4">
         {workExp.map((work, idx) => (

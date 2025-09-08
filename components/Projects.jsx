@@ -2,7 +2,6 @@
 import React from "react";
 
 import { useAppContext } from "@/context/AppContext";
-import { FiBriefcase } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 
 function Projects() {
@@ -98,15 +97,13 @@ function Projects() {
 
   return (
     <div id="projects" className="py-20 min-h-95 lg:h-auto">
-      <div className="flex gap-4 mb-8">
-        <FiBriefcase size={34} className="mt-0.5" />
-        <h1 className="text-2xl lg:text-3xl font-bold tracking-tight">
-          Projects
-        </h1>
-      </div>
+      <h1 className="text-2xl lg:text-3xl font-bold tracking-tight">
+        Projects
+      </h1>
 
       <div className="max-w-3xl space-y-12 md:space-y-8">
         {projects.map((project, idx) => {
+          const img = project?.img;
           const ContentWrapper = ({ children }) => {
             return project?.link ? (
               <a
@@ -138,15 +135,19 @@ function Projects() {
             >
               {/* Image */}
               <div className="hidden md:block mt-2 w-2/6">
-                <img
-                  src={project.img}
-                  alt={project.alt}
-                  onClick={() => {
-                    openModal();
-                    setScreenshots(project.screenshots);
-                  }}
-                  className="object-cover h-25 w-full rounded-sm border-1 border-cyan-600/50 cursor-pointer hover:scale-105 transition duration-100 ease-out"
-                />
+                {img ? (
+                  <img
+                    src={project.img}
+                    alt={project.alt}
+                    onClick={() => {
+                      openModal();
+                      setScreenshots(project.screenshots);
+                    }}
+                    className="object-cover h-25 w-full rounded-sm border-1 border-cyan-600/50 cursor-pointer hover:scale-105 transition duration-100 ease-out"
+                  />
+                ) : (
+                  <div>Loading...</div>
+                )}
               </div>
 
               {/* Content */}
@@ -156,7 +157,9 @@ function Projects() {
                     <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
                       {project.title}
                     </h2>
-                    <MdArrowOutward className="mt-2 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
+                    {project?.link && (
+                      <MdArrowOutward className="mt-2 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
+                    )}
                   </div>
                   <p className="text-sm font-medium mt-1">{project.desc}</p>
                 </ContentWrapper>

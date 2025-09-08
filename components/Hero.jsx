@@ -8,7 +8,7 @@ import {
 } from "@tabler/icons-react";
 
 function Hero({ slideScreen, setSlideScreen }) {
-  const bgColor = "bg-gradient-to-r from-gray-900 to-slate-950";
+  const bgColor = "bg-gradient-to-r from-gray-900 to-slate-900";
 
   return (
     <section
