@@ -12,6 +12,7 @@ function Projects() {
     {
       title: "My Portfolio Website",
       img: "/projects/portfolio/2.jpg",
+      link: "https://bikashrajkhowa.vercel.app",
       screenshots: ["/projects/portfolio/1.jpg", "/projects/portfolio/2.jpg"],
       alt: "My Portfolio Website preview",
       desc: "A responsive portfolio built with Next.js, Tailwind CSS, and subtle animations. Showcases my skills, experience, and projects with interactive previews. Deployed on Vercel.",
@@ -24,6 +25,7 @@ function Projects() {
     {
       title: "Footscribe90",
       img: "/projects/football-blog-app/1.jpg",
+      link: "https://footscribe90.vercel.app",
       screenshots: [
         "/projects/football-blog-app/1.jpg",
         "/projects/football-blog-app/2.jpg",
@@ -44,6 +46,7 @@ function Projects() {
     {
       title: "Handipro",
       img: "/projects/handipro/1.jpg",
+      link: "https://handipro.vercel.app",
       screenshots: [
         "/projects/handipro/1.jpg",
         "/projects/handipro/2.jpg",
@@ -104,37 +107,59 @@ function Projects() {
 
       <div className="max-w-3xl space-y-12 md:space-y-8">
         {projects.map((project, idx) => {
+          const ContentWrapper = ({ children }) => {
+            return project?.link ? (
+              <a
+                href={project?.link || "#"}
+                target="_blank"
+                aria-label="Visit project website"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-1.5 cursor-pointer"
+              >
+                {children}
+              </a>
+            ) : (
+              <span
+                aria-label="Visit project website"
+                className="flex flex-col gap-1.5 cursor-pointer"
+                onClick={() => {
+                  openModal();
+                  setScreenshots(project.screenshots);
+                }}
+              >
+                {children}
+              </span>
+            );
+          };
           return (
             <div
               key={idx}
-              onClick={() => {
-                openModal();
-                setScreenshots(project.screenshots);
-              }}
-              className="flex flex-col md:flex-row md:gap-8 group opacity-80 hover:opacity-100 transition-all duration-200 ease-out cursor-pointer md:p-6 rounded-md hover:md:bg-gradient-to-b from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:md:shadow-lg"
+              className="flex flex-col md:flex-row md:gap-8 opacity-80 hover:opacity-100 transition-all duration-200 ease-out md:p-6 rounded-md hover:md:bg-gradient-to-b from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:md:shadow-lg"
             >
               {/* Image */}
               <div className="hidden md:block mt-2 w-2/6">
                 <img
                   src={project.img}
                   alt={project.alt}
-                  className="object-cover h-25 w-full rounded-sm border-1 border-cyan-600/50"
+                  onClick={() => {
+                    openModal();
+                    setScreenshots(project.screenshots);
+                  }}
+                  className="object-cover h-25 w-full rounded-sm border-1 border-cyan-600/50 cursor-pointer hover:scale-105 transition duration-100 ease-out"
                 />
               </div>
 
               {/* Content */}
-              <div className="flex flex-col justify-start w-full">
-                <div className="flex gap-1.5 justify-start items-center group">
-                  <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
-                    {project.title}
-                  </h2>
-                  <MdArrowOutward className="mt-1 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
-                  <span className="px-3 py-0.5 rounded-full bg-transparent text-gray-300 underline text-xs md:hidden">
-                    Preview
-                  </span>
-                </div>
-
-                <p className="text-sm font-medium mt-1">{project.desc}</p>
+              <div className="flex flex-col justify-start w-full group">
+                <ContentWrapper>
+                  <div className="flex gap-1.5 group">
+                    <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
+                      {project.title}
+                    </h2>
+                    <MdArrowOutward className="mt-2 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
+                  </div>
+                  <p className="text-sm font-medium mt-1">{project.desc}</p>
+                </ContentWrapper>
 
                 {/* Tools */}
                 <div className="text-sm font-medium mt-3 flex flex-wrap gap-2">
@@ -158,6 +183,10 @@ function Projects() {
                 <img
                   src={project.img}
                   alt={project.alt}
+                  onClick={() => {
+                    openModal();
+                    setScreenshots(project.screenshots);
+                  }}
                   className="object-cover h-full w-full rounded-sm border-1 border-cyan-600/50"
                 />
               </div>
