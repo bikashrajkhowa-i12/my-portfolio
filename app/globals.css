@@ -121,6 +121,16 @@
   }
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
 }

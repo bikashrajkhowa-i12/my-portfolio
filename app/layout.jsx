@@ -18,7 +18,16 @@ const geistMono = Geist_Mono({
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0f172a",
+  themeColor: [
+    {
+      media: "(prefers-color-scheme: light)",
+      color: "rgba(248, 250, 252, 0.7)",
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
+      color: "rgba(15, 23, 42, 0.7)",
+    },
+  ],
 };
 
 export const metadata = {
@@ -91,7 +100,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Your Name",
+              name: "Bikash Rajkhowa",
               url: "https://bikashrajkhowa.vercel.app",
               sameAs: [
                 "https://github.com/bikashrajkhowa-i12",

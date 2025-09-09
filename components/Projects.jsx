@@ -97,7 +97,7 @@ function Projects() {
 
   return (
     <div id="projects" className="py-20 min-h-95 lg:h-auto">
-      <h1 className="text-2xl lg:text-3xl font-bold tracking-tight">
+      <h1 className="text-2xl lg:text-3xl font-bold tracking-tight mb-6">
         Projects
       </h1>
 
