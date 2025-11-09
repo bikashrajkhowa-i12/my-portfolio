@@ -5,7 +5,7 @@ import Skills from "./Skills";
 function About() {
   return (
     <div id="about" className="pt-20 min-h-95 lg:h-auto max-w-3xl">
-      <h1 className="text-2xl lg:text-3xl font-bold mb-6 tracking-tight">
+      <h1 className="text-2xl lg:text-2xl font-semi-bold tracking-tight mb-6 text-gray-300">
         About
       </h1>
       <p className="mb-4 text-gray-400/90">

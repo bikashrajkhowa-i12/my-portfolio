@@ -25,7 +25,7 @@ export const viewport = {
     },
     {
       media: "(prefers-color-scheme: dark)",
-      color: "rgba(15, 23, 42, 0.7)",
+      color: "rgba(15, 23, 42, 0.45)",
     },
   ],
 };

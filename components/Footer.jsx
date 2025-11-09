@@ -137,7 +137,7 @@ function Footer() {
 
           {/* Contact Form */}
 
-          <div className="bg-slate-800 p-8 rounded-xl shadow-lg">
+          <div className="bg-slate-800/50 p-8 rounded-xl shadow-lg">
             {msgSent ? (
               <MsgSentComp resend={() => setMsgSent(false)} />
             ) : (

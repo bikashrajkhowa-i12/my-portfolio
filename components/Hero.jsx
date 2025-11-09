@@ -15,7 +15,7 @@ function Hero({ slideScreen, setSlideScreen }) {
       className={`fixed inset-0 ${bgColor} flex flex-col justify-center text-gray-400
         p-4 items-center z-101 transition-translate duration-400 ease-in-out ${
           slideScreen
-            ? "-translate-x-full xl:-translate-x-[70vw]"
+            ? "-translate-x-full xl:-translate-x-[70vw] bg-none"
             : "tanslate-x-0"
         }`}
     >
@@ -58,7 +58,7 @@ function Hero({ slideScreen, setSlideScreen }) {
                 aria-label="Discover portfolio button"
                 onClick={() => setSlideScreen(!slideScreen)}
                 variant="outline"
-                className="bg-transparent rounded-lg text-md p-4 md:p-5 font-semibold "
+                className="bg-transparent rounded-lg text-md p-4 md:p-5 font-semibold hover:scale(50)"
               >
                 Discover
               </Button>
@@ -71,7 +71,7 @@ function Hero({ slideScreen, setSlideScreen }) {
         <IconChevronCompactLeft
           size="70"
           onClick={() => setSlideScreen(!slideScreen)}
-          className={`hidden md:inline absolute right-0 hover:scale-125 transition-all duration-300 ease-out ${
+          className={`hidden md:inline absolute right-0 hover:scale-125 hover:opacity-50 transition-all duration-300 ease-out ${
             !slideScreen ? "opacity-30" : "opacity-0"
           }`}
         />
@@ -80,7 +80,7 @@ function Hero({ slideScreen, setSlideScreen }) {
         <IconChevronCompactRight
           size="70"
           onClick={() => setSlideScreen(!slideScreen)}
-          className={`hidden md:inline absolute right-0 hover:scale-125 transition-all duration-300 ease-out ${
+          className={`hidden md:inline absolute right-0 hover:scale-125 hover:opacity-50 transition-all duration-300 ease-out ${
             slideScreen ? "opacity-30" : "opacity-0"
           }`}
         />

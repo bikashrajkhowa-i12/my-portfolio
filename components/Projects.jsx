@@ -12,7 +12,11 @@ function Projects() {
       title: "My Portfolio Website",
       img: "/projects/portfolio/2.jpg",
       link: "https://bikashrajkhowa.vercel.app",
-      screenshots: ["/projects/portfolio/1.jpg", "/projects/portfolio/2.jpg"],
+      screenshots: [
+        "/projects/portfolio/1.jpg",
+        "/projects/portfolio/2.jpg",
+        "/projects/portfolio/3.jpg",
+      ],
       alt: "My Portfolio Website preview",
       desc: "A responsive portfolio built with Next.js, Tailwind CSS, and subtle animations. Showcases my skills, experience, and projects with interactive previews. Deployed on Vercel.",
       tools: [
@@ -97,7 +101,7 @@ function Projects() {
 
   return (
     <div id="projects" className="py-20 min-h-95 lg:h-auto">
-      <h1 className="text-2xl lg:text-3xl font-bold tracking-tight mb-6">
+      <h1 className="text-2xl lg:text-2xl font-semi-bold tracking-tight mb-6 text-gray-300">
         Projects
       </h1>
 

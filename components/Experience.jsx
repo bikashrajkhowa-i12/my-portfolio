@@ -73,7 +73,7 @@ function Experience() {
 
   return (
     <div id="experience" className="pt-20 min-h-95 lg:h-auto">
-      <h1 className="text-2xl lg:text-3xl font-bold mb-6 tracking-tight">
+      <h1 className="text-2xl lg:text-2xl font-semi-bold tracking-tight mb-6 text-gray-300">
         Experience
       </h1>
 
