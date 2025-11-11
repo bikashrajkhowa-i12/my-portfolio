@@ -22,10 +22,10 @@ function Sidebar() {
       className="absolute top-16 right-16 hidden lg:flex flex-col items-start justify-between p-4 gap-20"
     >
       <div className="space-y-2">
-        <h1 className="text-4xl font-semibold tracking-tight text-gray-300">
+        <h1 className="text-4xl font-semibold tracking-tight text-gray-100">
           Bikash Rajkhowa
         </h1>
-        <h2 className="text-xl font-medium tracking-tight text-gray-300">
+        <h2 className="text-xl font-medium tracking-tight text-gray-200">
           Software Engineer
         </h2>
       </div>

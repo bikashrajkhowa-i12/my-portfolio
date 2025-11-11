@@ -101,11 +101,11 @@ function Projects() {
 
   return (
     <div id="projects" className="py-20 min-h-95 lg:h-auto">
-      <h1 className="text-2xl lg:text-2xl font-semi-bold tracking-tight mb-6 text-gray-300">
+      <h1 className="text-2xl lg:text-2xl tracking-tight mb-6 text-gray-300">
         Projects
       </h1>
 
-      <div className="max-w-3xl space-y-12 md:space-y-8">
+      <div className="max-w-3xl space-y-12 md:space-y-8 group/parent">
         {projects.map((project, idx) => {
           const img = project?.img;
           const ContentWrapper = ({ children }) => {
@@ -135,7 +135,7 @@ function Projects() {
           return (
             <div
               key={idx}
-              className="flex flex-col md:flex-row md:gap-8 opacity-80 hover:opacity-100 transition-all duration-200 ease-out md:p-6 rounded-md hover:md:bg-gradient-to-b from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:md:shadow-lg"
+              className="group/child flex flex-col md:flex-row md:gap-8 opacity-90 group-hover/parent:opacity-40 hover:!opacity-100 transition-all duration-300 ease-out md:p-6 rounded-md hover:md:bg-gradient-to-b from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:md:shadow-lg"
             >
               {/* Image */}
               <div className="hidden md:block mt-2 w-2/6">
@@ -147,7 +147,7 @@ function Projects() {
                       openModal();
                       setScreenshots(project.screenshots);
                     }}
-                    className="object-cover h-25 w-full rounded-sm border-1 border-cyan-600/50 cursor-pointer hover:scale-105 transition duration-100 ease-out"
+                    className="object-cover h-25 w-full rounded-sm border-1 border-cyan-600/50 cursor-pointer hover:scale-110 transition duration-200 ease-out"
                   />
                 ) : (
                   <div>Loading...</div>

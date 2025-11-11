@@ -73,17 +73,20 @@ function Experience() {
 
   return (
     <div id="experience" className="pt-20 min-h-95 lg:h-auto">
-      <h1 className="text-2xl lg:text-2xl font-semi-bold tracking-tight mb-6 text-gray-300">
+      <h1 className="text-2xl lg:text-2xl tracking-tight mb-6 text-gray-300">
         Experience
       </h1>
 
-      <div className="max-w-3xl space-y-16 md:space-y-4">
+      <div className="max-w-3xl space-y-16 md:space-y-4 group/parent">
         {workExp.map((work, idx) => (
           <a
             href={work.org_website}
             target="_blank"
             key={idx}
-            className="flex flex-col md:flex-row md:gap-15 opacity-80 group hover:opacity-100 md:p-6 rounded-md hover:md:shadow-lg transition-all duration-200 ease-out hover:cursor-pointer hover:md:bg-gradient-to-br from-teal-300/5 via-gray-500/10 to-slate-800/25 hover:md:shadow-lg"
+            className="group/child flex flex-col md:flex-row md:gap-15 opacity-90 
+                    group-hover/parent:opacity-40 hover:!opacity-100 md:p-6 rounded-md 
+                    transition-all duration-200 ease-out hover:cursor-pointer hover:md:shadow-lg 
+                    hover:md:bg-gradient-to-br from-teal-300/5 via-gray-500/10 to-slate-800/25"
           >
             {/* Duration */}
             <h2 className="text-xs font-semibold text-gray-600 w-1/4 mt-2">
@@ -92,13 +95,19 @@ function Experience() {
 
             {/* Content */}
             <div className="flex flex-col justify-start w-full">
-              <div className="flex gap-2 justify-start items-center group">
-                <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
+              {/* Title + Arrow */}
+              <div className="flex gap-2 justify-start items-center">
+                <h2 className="text-lg font-medium text-white group-hover/child:text-teal-300">
                   {work.role} • {work.org}
                 </h2>
-                <MdArrowOutward className="mt-1 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
+
+                <MdArrowOutward
+                  className="mt-1 transition duration-100 ease-in group-hover/child:text-teal-300
+                            group-hover/child:-translate-y-1 group-hover/child:translate-x-1.5"
+                />
               </div>
 
+              {/* Description */}
               <div className="text-sm font-medium mt-2 lg:mt-4 leading-relaxed">
                 {work.work_desc}
               </div>
