@@ -26,7 +26,7 @@ export const ContextProvider = ({ children }) => {
 
     if (!hasPointer) {
       area.style.setProperty("--x", `${window.innerWidth * 0.8}px`);
-      area.style.setProperty("--y", `${window.innerHeight * 0.2}px`);
+      area.style.setProperty("--y", `${window.innerHeight * 0.1}px`);
       return;
     }
 

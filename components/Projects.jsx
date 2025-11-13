@@ -100,7 +100,7 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" className="py-20 min-h-95 lg:h-auto">
+    <div id="projects" className="py-15 min-h-95 lg:h-auto">
       <h1 className="text-2xl lg:text-2xl tracking-tight mb-6 text-gray-300">
         Projects
       </h1>

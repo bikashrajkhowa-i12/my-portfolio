@@ -8,7 +8,7 @@ import {
 } from "@tabler/icons-react";
 
 function Hero({ slideScreen, setSlideScreen }) {
-  const bgColor = "bg-gradient-to-r from-gray-900 to-slate-900";
+  const bgColor = "";
 
   return (
     <section
@@ -47,9 +47,9 @@ function Hero({ slideScreen, setSlideScreen }) {
             </h2>
           </div>
 
-          <p className="mt-6 text-base md:text-lg font-medium text-gray-300 tracking-tight">
-            I build full-stack web applications that bring ideas to life in a
-            simple and reliable way.
+          <p className="mt-6 text-base md:text-lg font-medium text-gray-300/90 tracking-tight">
+            Passionate about building scalable, reliable, and user-centric
+            applications with modern web technologies.
           </p>
 
           <div className="mt-16 flex justify-center">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 import { MdArrowOutward } from "react-icons/md";
@@ -128,6 +129,20 @@ function Experience() {
           </a>
         ))}
       </div>
+
+      <Link
+        className="flex gap-2 group cursor-pointer pt-10 md:py-8"
+        href="/cv/BIKASH_RAJKHOWA_SOFTWARE_ENGINEER_CV.pdf"
+        target="_blank"
+      >
+        <h1 className="text-lg font-semibold tracking-tight mb-6 text-gray-300 group-hover:text-teal-300">
+          View full resume
+        </h1>
+        <MdArrowOutward
+          className="mt-2 transition duration-100 ease-in group-hover:text-teal-300
+                            group-hover:-translate-y-1 group-hover:translate-x-1.5"
+        />
+      </Link>
     </div>
   );
 }
