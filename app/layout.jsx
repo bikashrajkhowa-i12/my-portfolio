@@ -117,7 +117,7 @@ export default function RootLayout({ children }) {
                 "https://www.linkedin.com/in/bikash-rajkhowa-857a191a6/",
               ],
               jobTitle:
-                "Software Engineer - (Nextjs, React, Tailwindcss, Nodejs, Express, Mongo, PG, AWS)",
+                "Software Engineer - (React, Nextjs, Tailwindcss, Nodejs, Express, Mongo, PG, AWS)",
             }),
           }}
         />

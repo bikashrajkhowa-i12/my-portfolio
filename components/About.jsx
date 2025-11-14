@@ -1,10 +1,18 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 import Skills from "./Skills";
 
-function About() {
+function About({ slideScreen }) {
   return (
-    <div id="about" className="pt-22 min-h-95 lg:h-auto max-w-2xl">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={slideScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.4 }}
+      id="about"
+      className="pt-22 min-h-95 lg:h-auto max-w-2xl"
+    >
       <h1 className="text-md font-bold mb-6 text-gray-300">ABOUT</h1>
       <p className="mb-4 font-light text-gray-300/90">
         I'm a software engineer specializing in building fast, reliable, and
@@ -34,7 +42,7 @@ function About() {
         gaming for some fun, or out on my bike enjoying the outdoors.
       </p>
       <Skills />
-    </div>
+    </motion.div>
   );
 }
 

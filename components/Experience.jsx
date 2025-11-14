@@ -1,9 +1,10 @@
-import Link from "next/link";
 import React from "react";
+
+import { motion } from "framer-motion";
 
 import { MdArrowOutward } from "react-icons/md";
 
-function Experience() {
+function Experience({ slideScreen }) {
   const workExp = [
     {
       duration: "2022-2023",
@@ -73,7 +74,13 @@ function Experience() {
   ];
 
   return (
-    <div id="experience" className="pt-22 min-h-95 lg:h-auto max-w-2xl">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={slideScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.4 }}
+      id="experience"
+      className="pt-22 min-h-95 lg:h-auto max-w-2xl"
+    >
       <h1 className="text-md font-bold mb-6 text-gray-300">EXPERIENCE</h1>
 
       <div className="max-w-3xl space-y-16 md:space-y-4 group/parent">
@@ -127,21 +134,7 @@ function Experience() {
           </a>
         ))}
       </div>
-
-      <Link
-        className="flex gap-2 group cursor-pointer pt-15 md:py-8"
-        href="/cv/BIKASH_RAJKHOWA_SOFTWARE_ENGINEER_CV.pdf"
-        target="_blank"
-      >
-        <h1 className="text-md font-semibold tracking-tight mb-6 text-gray-200 group-hover:text-teal-300">
-          View Full Résumé
-        </h1>
-        <MdArrowOutward
-          className="mt-2 transition duration-100 ease-in group-hover:text-teal-300
-                            group-hover:-translate-y-1 group-hover:translate-x-1.5"
-        />
-      </Link>
-    </div>
+    </motion.div>
   );
 }
 

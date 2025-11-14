@@ -7,7 +7,6 @@ import {
   IconChevronCompactRight,
 } from "@tabler/icons-react";
 import { FaChevronCircleRight } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
 
 function Hero({ slideScreen, setSlideScreen }) {
   const bgColor = "";
@@ -65,11 +64,11 @@ function Hero({ slideScreen, setSlideScreen }) {
                 aria-label="Discover portfolio button"
                 onClick={() => setSlideScreen(!slideScreen)}
                 variant="outline"
-                className="bg-transparent rounded-full text-md p-4 md:p-5 font-semibold cursor-pointer
-                hover:bg-teal-400 hover:scale-110 transition-all duration-300 ease-out"
+                className="bg-transparent rounded-full text-sm font-medium p-4 md:p-5 cursor-pointer
+                hover:bg-teal-400 transition-all duration-300 ease-out tracking-tight"
               >
                 View My Work{" "}
-                <FaAngleRight className="transition-transform group-hover:translate-x-2 transition-all duration-400" />
+                <FaChevronCircleRight className="transition-transform group-hover:scale-150 transition-all duration-400" />
               </Button>
             </a>
           </div>

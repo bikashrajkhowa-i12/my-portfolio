@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 
+import { motion } from "framer-motion";
+
 import { useAppContext } from "@/context/AppContext";
 import { MdArrowOutward } from "react-icons/md";
 
-function Projects() {
+function Projects({ slideScreen }) {
   const { openModal, setScreenshots } = useAppContext();
 
   const projects = [
@@ -100,7 +102,13 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" className="py-22 min-h-95 lg:h-auto max-w-2xl">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={slideScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.4 }}
+      id="projects"
+      className="py-22 min-h-95 lg:h-auto max-w-2xl"
+    >
       <h1 className="text-md font-bold mb-6 text-gray-300">PROJECTS</h1>
 
       <div className="max-w-3xl space-y-12 md:space-y-8 group/parent">
@@ -201,7 +209,7 @@ function Projects() {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
