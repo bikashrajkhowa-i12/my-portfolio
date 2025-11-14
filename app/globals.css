@@ -123,16 +123,18 @@ html {
   height: auto;
   font-family: var(--font-inter);
   font-feature-settings: "cv11" 1; /* for single story "a" */
+  margin: 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
-  scroll-behavior: smooth;
   height: 100vh;
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none; /* rubbery-bounce effect on IOS (enabled:"auto", disable: "none") */
+  overscroll-behavior: auto; /* rubbery-bounce effect on IOS (enabled:"auto", disable: "none") */
   background: rgb(14, 22, 41);
 }
 
