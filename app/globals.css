@@ -132,7 +132,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: auto; /* rubbery-bounce effect on IOS enabled (disable-none) */
+  overscroll-behavior: none; /* rubbery-bounce effect on IOS (enabled:"auto", disable: "none") */
   background: rgb(14, 22, 41);
 }
 
