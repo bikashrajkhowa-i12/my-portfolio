@@ -25,8 +25,9 @@ export const ContextProvider = ({ children }) => {
     const hasPointer = window.matchMedia("(pointer: fine)").matches;
 
     if (!hasPointer) {
-      area.style.setProperty("--x", `${window.innerWidth * 0.8}px`);
-      area.style.setProperty("--y", `${window.innerHeight * 0.1}px`);
+      // Disable the glow completely
+      area.style.setProperty("--x", `-9999px`);
+      area.style.setProperty("--y", `-9999px`);
       return;
     }
 

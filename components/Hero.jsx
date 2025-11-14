@@ -6,6 +6,8 @@ import {
   IconChevronCompactLeft,
   IconChevronCompactRight,
 } from "@tabler/icons-react";
+import { FaChevronCircleRight } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 
 function Hero({ slideScreen, setSlideScreen }) {
   const bgColor = "";
@@ -15,7 +17,7 @@ function Hero({ slideScreen, setSlideScreen }) {
       className={`fixed inset-0 ${bgColor} flex flex-col justify-center text-gray-400
         p-4 items-center z-101 transition-translate duration-400 ease-in-out ${
           slideScreen
-            ? "-translate-x-full xl:-translate-x-[70vw] bg-none"
+            ? "-translate-x-full xl:-translate-x-[61vw] bg-none"
             : "tanslate-x-0"
         }`}
     >
@@ -38,29 +40,36 @@ function Hero({ slideScreen, setSlideScreen }) {
             <h1>Hi,</h1>
           </div>
 
-          <div className="text-4xl md:text-6xl font-bold">
-            <span className="bg-gradient-to-r from-pink-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent tracking-tight">
-              I’m Bikash Rajkhowa
+          <div className="text-4xl md:text-6xl font-semibold">
+            I’m{" "}
+            <span className="bg-gradient-to-tl from-cyan-500 to-cyan-400 bg-clip-text text-transparent tracking-tight">
+              Bikash Rajkhowa
             </span>
-            <h2 className="mt-2 text-xl md:text-2xl font-semibold tracking-tight">
+            <h2 className="mt-2 text-xl md:text-2xl font-medium text-teal-400">
               Software Engineer
             </h2>
           </div>
 
-          <p className="mt-6 text-base md:text-lg font-medium text-gray-300/90 tracking-tight">
+          <p className="mt-6 text-base md:text-lg font-light text-gray-300/70">
             Passionate about building scalable, reliable, and user-centric
             applications with modern web technologies.
           </p>
 
-          <div className="mt-16 flex justify-center">
-            <a href="#about" aria-label="Scroll to Discover section">
+          <div className="mt-20 flex justify-center">
+            <a
+              href="#about"
+              aria-label="Scroll to Discover section"
+              className="group"
+            >
               <Button
                 aria-label="Discover portfolio button"
                 onClick={() => setSlideScreen(!slideScreen)}
                 variant="outline"
-                className="bg-transparent rounded-lg text-md p-4 md:p-5 font-semibold hover:scale(50)"
+                className="bg-transparent rounded-full text-md p-4 md:p-5 font-semibold cursor-pointer
+                hover:bg-teal-400 hover:scale-110 transition-all duration-300 ease-out"
               >
-                Discover
+                View My Work{" "}
+                <FaAngleRight className="transition-transform group-hover:translate-x-2 transition-all duration-400" />
               </Button>
             </a>
           </div>

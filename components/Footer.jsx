@@ -118,13 +118,13 @@ function Footer() {
   };
 
   return (
-    <section id="discover" className="flex flex-col xl:pl-80">
+    <section id="discover" className="flex flex-col xl:pl-130">
       <div className="pt-20 h-auto bg-inherit">
-        <div className="max-w-3xl mx-auto px-2 py-16 grid md:grid-cols-2 gap-12">
+        <div className="max-w-2xl mx-auto px-2 py-16 grid md:grid-cols-2 gap-2">
           {/* Intro + Social Links */}
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-gray-200">Get in Touch</h2>
-            <p className="text-gray-400">
+            <p className="text-gray-300/90 font-light leading-relaxed text-left">
               Your message is always welcome. Reach out or connect with me
               through social links below.
             </p>

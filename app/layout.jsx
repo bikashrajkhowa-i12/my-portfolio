@@ -1,9 +1,19 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 import { ContextProvider } from "@/context/AppContext";
 import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
+const inter = localFont({
+  src: [
+    {
+      path: "../public/fonts/inter/InterVariable.ttf",
+      style: "normal",
+    },
+  ],
+  variable: "--font-inter",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -92,7 +102,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={inter.className}>
+    <html lang="en" data-scroll-behavior="smooth" className={inter.variable}>
       <head>
         <script
           type="application/ld+json"

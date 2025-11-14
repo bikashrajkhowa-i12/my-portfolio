@@ -100,10 +100,8 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" className="py-15 min-h-95 lg:h-auto">
-      <h1 className="text-2xl lg:text-2xl tracking-tight mb-6 text-gray-300">
-        Projects
-      </h1>
+    <div id="projects" className="py-22 min-h-95 lg:h-auto max-w-2xl">
+      <h1 className="text-md font-bold mb-6 text-gray-300">PROJECTS</h1>
 
       <div className="max-w-3xl space-y-12 md:space-y-8 group/parent">
         {projects.map((project, idx) => {
@@ -158,14 +156,16 @@ function Projects() {
               <div className="flex flex-col justify-start w-full group">
                 <ContentWrapper>
                   <div className="flex gap-1.5 group">
-                    <h2 className="text-lg font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
+                    <h2 className="text-md font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
                       {project.title}
                     </h2>
                     {project?.link && (
                       <MdArrowOutward className="mt-2 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
                     )}
                   </div>
-                  <p className="text-sm font-medium mt-1">{project.desc}</p>
+                  <p className="text-sm font-light leading-relaxed mt-1 text-gray-300/90 text-start">
+                    {project.desc}
+                  </p>
                 </ContentWrapper>
 
                 {/* Tools */}

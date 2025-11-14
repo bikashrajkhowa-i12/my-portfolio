@@ -54,12 +54,12 @@ function Skills() {
     <div id="skills" className="h-auto mt-10">
       <Accordion type="single" collapsible className="w-full md:w-4/6">
         <AccordionItem value="skills">
-          <AccordionTrigger className="border-0 hover:no-underline flex justify-start items-center opacity-100 md:opacity-80 hover:opacity-100 cursor-pointer">
-            <h2 className="font-bold tracking-tight text-lg text-gray-300">
-              ⚙️ Tech Stack:
+          <AccordionTrigger className="border-0 hover:no-underline flex justify-start items-center opacity-100 cursor-pointer">
+            <h2 className="font-semibold tracking-tight text-lg text-gray-200">
+              Tech Stack:
             </h2>
             <div className="flex items-center justify-between gap-2">
-              <SiNextdotjs size={15} color="white" />
+              <SiNextdotjs size={15} />
               <SiReact size={15} />
               <SiNodedotjs size={15} />
               <SiExpress size={22} />

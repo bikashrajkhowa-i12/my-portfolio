@@ -56,12 +56,12 @@ function Experience() {
       work_desc: (
         <>
           Contributed to the development and maintenance of BYJU’s core{" "}
-          <strong className="group-hover:text-gray-200/90 font-medium">
+          <strong className="group-hover:text-gray-200 font-semibold">
             “KART”
           </strong>{" "}
           order-punching system. Built and optimized web pages and RESTful APIs,
           leading the migration of services to a{" "}
-          <strong className="group-hover:text-gray-200/90 font-medium">
+          <strong className="group-hover:text-gray-200 font-medium">
             serverless architecture
           </strong>
           . Implemented rapid data-fix and database migration scripts to
@@ -73,10 +73,8 @@ function Experience() {
   ];
 
   return (
-    <div id="experience" className="pt-20 min-h-95 lg:h-auto">
-      <h1 className="text-2xl lg:text-2xl tracking-tight mb-6 text-gray-300">
-        Experience
-      </h1>
+    <div id="experience" className="pt-22 min-h-95 lg:h-auto max-w-2xl">
+      <h1 className="text-md font-bold mb-6 text-gray-300">EXPERIENCE</h1>
 
       <div className="max-w-3xl space-y-16 md:space-y-4 group/parent">
         {workExp.map((work, idx) => (
@@ -85,12 +83,12 @@ function Experience() {
             target="_blank"
             key={idx}
             className="group/child flex flex-col md:flex-row md:gap-15 opacity-90 
-                    group-hover/parent:opacity-40 hover:!opacity-100 md:p-6 rounded-md 
+                    group-hover/parent:opacity-40 hover:!opacity-100 md:p-5 rounded-md 
                     transition-all duration-200 ease-out hover:cursor-pointer hover:md:shadow-lg 
                     hover:md:bg-gradient-to-br from-teal-300/5 via-gray-500/10 to-slate-800/25"
           >
             {/* Duration */}
-            <h2 className="text-xs font-semibold text-gray-600 w-1/4 mt-2">
+            <h2 className="text-xs font-semibold text-gray-500 w-1/4 mt-2">
               {work.duration}
             </h2>
 
@@ -98,7 +96,7 @@ function Experience() {
             <div className="flex flex-col justify-start w-full">
               {/* Title + Arrow */}
               <div className="flex gap-2 justify-start items-center">
-                <h2 className="text-lg font-medium text-white group-hover/child:text-teal-300">
+                <h2 className="text-md font-medium text-white group-hover/child:text-teal-300">
                   {work.role} • {work.org}
                 </h2>
 
@@ -109,7 +107,7 @@ function Experience() {
               </div>
 
               {/* Description */}
-              <div className="text-sm font-medium mt-2 lg:mt-4 leading-relaxed">
+              <div className="text-sm font-light leading-relaxed mt-2 lg:mt-4 text-gray-300/90 text-start">
                 {work.work_desc}
               </div>
 
@@ -131,12 +129,12 @@ function Experience() {
       </div>
 
       <Link
-        className="flex gap-2 group cursor-pointer pt-10 md:py-8"
+        className="flex gap-2 group cursor-pointer pt-15 md:py-8"
         href="/cv/BIKASH_RAJKHOWA_SOFTWARE_ENGINEER_CV.pdf"
         target="_blank"
       >
-        <h1 className="text-lg font-semibold tracking-tight mb-6 text-gray-300 group-hover:text-teal-300">
-          View full resume
+        <h1 className="text-md font-semibold tracking-tight mb-6 text-gray-200 group-hover:text-teal-300">
+          View Full Résumé
         </h1>
         <MdArrowOutward
           className="mt-2 transition duration-100 ease-in group-hover:text-teal-300

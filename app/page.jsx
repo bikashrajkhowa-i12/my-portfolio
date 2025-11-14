@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { motion } from "framer-motion";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -25,12 +26,12 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={slideScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
+        transition={{ duration: 0.4 }}
       >
         <main className={styles}>
           <section
             id="discover"
-            className="min-h-screen flex flex-col xl:pl-80"
+            className="min-h-screen flex flex-col xl:pl-140"
           >
             <div className="fixed z-100 top-0 left-0 w-full backdrop-blur-lg px-2 py-3 xl:hidden">
               <div className="flex justify-between items-center text-lg font-bold flex gap-3 pr-4">
@@ -41,9 +42,22 @@ export default function Home() {
                   <ChevronRight className="mt-0.5 " /> Bikash | Portfolio
                 </div>
 
-                <a aria-label="Scroll to footer" href="#footer">
-                  <MessagesSquare size={23} />
-                </a>
+                <div className="flex gap-5 font-medium text-md">
+                  <a
+                    href="/cv/BIKASH_RAJKHOWA_SOFTWARE_ENGINEER_CV.pdf"
+                    title="View Full Resume"
+                    target="_blank"
+                  >
+                    <IoDocumentTextOutline size={23} />
+                  </a>
+                  <a
+                    aria-label="Scroll to footer"
+                    href="#footer"
+                    title="Connect"
+                  >
+                    <MessagesSquare size={23} />
+                  </a>
+                </div>
               </div>
             </div>
             <About />
@@ -53,7 +67,13 @@ export default function Home() {
         </main>
       </motion.div>
       <footer id="footer" className={styles}>
-        <Footer />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={slideScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Footer />
+        </motion.div>
       </footer>
     </>
   );

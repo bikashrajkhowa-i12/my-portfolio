@@ -19,26 +19,24 @@ function Sidebar() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.2 }}
-      className="absolute top-16 right-16 hidden lg:flex flex-col items-start justify-between p-4 gap-20"
+      className="absolute top-19 right-8 hidden lg:flex flex-col items-start justify-between p-4 gap-20"
     >
-      <div className="space-y-2">
-        <h1 className="text-4xl font-semibold tracking-tight text-gray-100">
-          Bikash Rajkhowa
-        </h1>
-        <h2 className="text-xl font-medium tracking-tight text-gray-200">
+      <div className="space-y-1">
+        <h1 className="text-5xl font-bold text-gray-100">Bikash Rajkhowa</h1>
+        <h2 className="text-2xl font-normal text-gray-300 mt-2">
           Software Engineer
         </h2>
       </div>
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5.5 w-full mt-10">
         {links.map((link, idx) => {
           const isActive = selectedLink === link.href;
 
           return (
-            <div key={idx} className="flex items-center gap-2 cursor-pointer">
+            <div key={idx} className="flex items-center gap-5 cursor-pointer">
               <motion.div
                 initial={{ width: 0 }}
-                animate={{ width: isActive ? 60 : 10 }}
+                animate={{ width: isActive ? 90 : 30 }}
                 transition={{ duration: 0.08 }}
                 className={`h-0.5 bg-gray-200 ${
                   isActive ? "opacity-100" : "opacity-50"
@@ -49,7 +47,7 @@ function Sidebar() {
                 aria-label="Scroll to the selected value"
                 href={link.href}
                 onClick={() => setSelectedLink(link.href)}
-                className={`text-xs font-bold transition-all duration-200 hover:text-cyan-300 tracking-widest ${
+                className={`w-full text-xs font-semibold transition-all duration-200 hover:text-cyan-300 tracking-widest ${
                   isActive ? "text-white" : "text-white/50"
                 }`}
               >
@@ -59,7 +57,7 @@ function Sidebar() {
           );
         })}
       </div>
-      <div className="pt-50">
+      <div className="pt-40">
         <GetInTouch />
       </div>
     </motion.div>
