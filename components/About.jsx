@@ -34,7 +34,7 @@ function About({ slideScreen }) {
         , and{" "}
         <strong className="text-gray-300/90 font-semibold">teamwork</strong>.
         Each of them gave me something new to learn—whether it was mastering a
-        tool , adapting to different requirements , or finding better ways to
+        tool, adapting to different requirements, or finding better ways to
         write clean maintainable code .
       </p>
       <p className="mb-4 text-gray-400/90">

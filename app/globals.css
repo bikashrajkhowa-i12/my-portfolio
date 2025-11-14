@@ -129,14 +129,14 @@ body {
   scroll-behavior: smooth;
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   background: rgb(14, 22, 41);
 }
 
 body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
+  overscroll-behavior: auto; /* rubbery-bounce effect on IOS enabled (disable-none) */
 }
 
 body {
