@@ -7,7 +7,7 @@ import { MdArrowOutward } from "react-icons/md";
 function Experience({ slideScreen }) {
   const workExp = [
     {
-      duration: "2022-2023",
+      duration: "2022 — 2023",
       role: "Software Engineer",
       org: "BYJU's",
       org_website: "https://byjus.com",
@@ -28,17 +28,16 @@ function Experience({ slideScreen }) {
       work_desc: (
         <>
           Spearheaded the beta rollout of the quotation and order management
-          system, optimizing sales request handling and payment processing
-          workflows for the team. Designed and integrated modules and
-          microservices to enhance system functionality, reliability, and
-          scalability. Translated complex business requirements into efficient,
-          timely solutions while continuously refining and optimizing code to
-          elevate overall system performance and quality.
+          system, streamlining sales requests and payment workflows. Designed
+          and integrated key modules and microservices to boost functionality,
+          reliability, and scalability. Translated complex business needs into
+          efficient solutions while continuously optimizing code for performance
+          and quality.
         </>
       ),
     },
     {
-      duration: "2021-2022",
+      duration: "2021 — 2022",
       role: "Associate Software Engineer",
       org: "BYJU's",
       org_website: "https://byjus.com",
@@ -56,16 +55,10 @@ function Experience({ slideScreen }) {
       ],
       work_desc: (
         <>
-          Contributed to the development and maintenance of BYJU’s core{" "}
-          <strong className="group-hover:text-gray-200 font-semibold">
-            “KART”
-          </strong>{" "}
+          Contributed to the development and maintenance of BYJU’s core “KART”{" "}
           order-punching system. Built and optimized web pages and RESTful APIs,
-          leading the migration of services to a{" "}
-          <strong className="group-hover:text-gray-200 font-medium">
-            serverless architecture
-          </strong>
-          . Implemented rapid data-fix and database migration scripts to
+          leading the migration of services to a serverless architecture .
+          Implemented rapid data-fix and database migration scripts to
           efficiently manage large-scale datasets and streamline database
           operations.
         </>
@@ -83,19 +76,19 @@ function Experience({ slideScreen }) {
     >
       <h1 className="text-md font-bold mb-6 text-gray-300">EXPERIENCE</h1>
 
-      <div className="max-w-3xl space-y-16 md:space-y-4 group/parent">
+      <div className="max-w-3xl space-y-16 md:space-y-6 group/parent">
         {workExp.map((work, idx) => (
           <a
             href={work.org_website}
             target="_blank"
             key={idx}
             className="group/child flex flex-col md:flex-row md:gap-15 opacity-90 
-                    group-hover/parent:opacity-40 hover:!opacity-100 md:p-5 rounded-md 
-                    transition-all duration-300 ease-in-out hover:cursor-pointer hover:md:shadow-lg 
-                    hover:md:bg-gray-300/5"
+                    group-hover/parent:opacity-40 hover:!opacity-90 md:px-6 md:py-4 rounded-sm 
+                    transition-all duration-300 ease-out hover:cursor-pointer hover:md:shadow-lg 
+                    hover:md:bg-cyan-100/[0.038]"
           >
             {/* Duration */}
-            <h2 className="text-xs font-semibold text-gray-500 w-1/4 mt-2">
+            <h2 className="text-xs font-medium text-gray-400/80 w-1/4 my-1.5">
               {work.duration}
             </h2>
 
@@ -114,7 +107,7 @@ function Experience({ slideScreen }) {
               </div>
 
               {/* Description */}
-              <div className="text-sm font-light leading-relaxed mt-2 lg:mt-4 text-gray-300/90 text-start">
+              <div className="text-[0.9rem] font-[340] mt-2 lg:mt-4 text-blue-200/75 text-start">
                 {work.work_desc}
               </div>
 
@@ -124,7 +117,8 @@ function Experience({ slideScreen }) {
                   <span
                     key={i}
                     onClick={() => window.open(tool.link, "_blank")}
-                    className="px-3 py-0.5 rounded-full bg-teal-900/30 text-teal-300 text-xs"
+                    className="px-3 py-1.5 rounded-full bg-teal-300/8 
+                      text-teal-300 text-xs font-medium shadow-sm"
                   >
                     {tool.name}
                   </span>

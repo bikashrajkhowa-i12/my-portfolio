@@ -80,7 +80,7 @@ function Hero({ slideScreen, setSlideScreen }) {
           size="70"
           onClick={() => setSlideScreen(!slideScreen)}
           className={`hidden md:inline absolute right-0 hover:scale-125 hover:opacity-50 transition-all duration-300 ease-out ${
-            !slideScreen ? "opacity-30" : "opacity-0"
+            !slideScreen ? "opacity-20" : "opacity-0"
           }`}
         />
       )}
@@ -89,7 +89,7 @@ function Hero({ slideScreen, setSlideScreen }) {
           size="70"
           onClick={() => setSlideScreen(!slideScreen)}
           className={`hidden md:inline absolute right-0 hover:scale-125 hover:opacity-50 transition-all duration-300 ease-out ${
-            slideScreen ? "opacity-30" : "opacity-0"
+            slideScreen ? "opacity-20" : "opacity-0"
           }`}
         />
       )}

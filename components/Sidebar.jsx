@@ -60,7 +60,7 @@ function Sidebar() {
                 animate={{ width: isActive ? 85 : 40 }}
                 transition={{ duration: 0.08 }}
                 className={`h-0.5 bg-gray-200 ${
-                  isActive ? "opacity-100" : "opacity-50"
+                  isActive ? "opacity-100" : "opacity-40"
                 }`}
               />
 
@@ -69,7 +69,7 @@ function Sidebar() {
                 href={link.href}
                 onClick={() => setSelectedLink(link.href)}
                 className={`w-full text-xs font-semibold transition-all duration-200 hover:text-cyan-300 tracking-widest ${
-                  isActive ? "text-white" : "text-white/50"
+                  isActive ? "text-white" : "text-white/40"
                 }`}
               >
                 {link.name}

@@ -135,7 +135,7 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: auto; /* rubbery-bounce effect on IOS (enabled:"auto", disable: "none") */
-  background: rgb(14, 22, 41);
+  background: rgb(15, 23, 42);
 }
 
 body {
@@ -151,11 +151,10 @@ body::before {
   pointer-events: none;
 
   background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    rgba(18, 50, 130, 0.342),
-    transparent 45%
+    circle 35rem at var(--x, 50%) var(--y, 50%),
+    rgba(33, 70, 159, 0.27),
+    transparent 85%
   );
-
   transition: background 0.05s linear;
 }
 

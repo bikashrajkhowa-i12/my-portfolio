@@ -141,7 +141,10 @@ function Projects({ slideScreen }) {
           return (
             <div
               key={idx}
-              className="group/child flex flex-col md:flex-row md:gap-8 opacity-90 group-hover/parent:opacity-40 hover:!opacity-100 transition-all duration-300 ease-in-out md:p-6 rounded-md hover:md:bg-gray-300/5 hover:md:shadow-lg"
+              className="group/child flex flex-col md:flex-row md:gap-8 opacity-90 
+                        group-hover/parent:opacity-40 hover:!opacity-90 transition-all 
+                        duration-300 ease-out md:px-6 md:py-4 rounded-sm hover:md:bg-cyan-100/[0.038]
+                        hover:md:shadow-lg"
             >
               {/* Image */}
               <div className="hidden md:block mt-2 w-2/6">
@@ -153,7 +156,9 @@ function Projects({ slideScreen }) {
                       openModal();
                       setScreenshots(project.screenshots);
                     }}
-                    className="object-cover h-25 w-full rounded-sm border-1 border-cyan-600/50 cursor-pointer hover:scale-110 transition duration-200 ease-out"
+                    className="object-cover h-25 w-full rounded-sm border-2 border-gray-300/10 
+                    group-hover/child:border-gray-500 cursor-pointer hover:scale-110 transition 
+                    duration-200 ease-out"
                   />
                 ) : (
                   <div>Loading...</div>
@@ -168,10 +173,13 @@ function Projects({ slideScreen }) {
                       {project.title}
                     </h2>
                     {project?.link && (
-                      <MdArrowOutward className="mt-2 group-active:text-teal-300 group-hover:text-teal-300 group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in" />
+                      <MdArrowOutward
+                        className="mt-1.5 group-active:text-teal-300 group-hover:text-teal-300 
+                      group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in"
+                      />
                     )}
                   </div>
-                  <p className="text-sm font-light leading-relaxed mt-1 text-gray-300/90 text-start">
+                  <p className="text-[0.9rem] my-1 font-[340] text-blue-200/75 text-start">
                     {project.desc}
                   </p>
                 </ContentWrapper>
@@ -186,7 +194,8 @@ function Projects({ slideScreen }) {
                       onClick={(e) => e.stopPropagation()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-0.5 rounded-full bg-teal-900/30 text-teal-300 text-xs"
+                      className="px-3 py-1.5 rounded-full bg-teal-300/8 
+                      text-teal-300 text-xs font-medium shadow-sm"
                     >
                       {tool.name}
                     </a>
@@ -202,7 +211,7 @@ function Projects({ slideScreen }) {
                     openModal();
                     setScreenshots(project.screenshots);
                   }}
-                  className="object-cover h-full w-full rounded-sm border-1 border-cyan-600/50"
+                  className="object-cover h-full w-full rounded-sm border-2 border-gray-300/10"
                 />
               </div>
             </div>
