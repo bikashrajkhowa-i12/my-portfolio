@@ -142,7 +142,7 @@ function Projects({ slideScreen }) {
             <div
               key={idx}
               className="group/child flex flex-col md:flex-row md:gap-8 opacity-90 
-                        group-hover/parent:opacity-40 hover:!opacity-90 transition-all 
+                        group-hover/parent:opacity-45 hover:!opacity-90 transition-all 
                         duration-300 ease-out md:px-6 md:py-4 rounded-sm hover:md:bg-cyan-100/[0.038]
                         hover:md:shadow-lg"
             >
@@ -169,13 +169,13 @@ function Projects({ slideScreen }) {
               <div className="flex flex-col justify-start w-full group">
                 <ContentWrapper>
                   <div className="flex gap-1.5 group">
-                    <h2 className="text-md font-medium text-gray-200 group-hover:text-teal-300 group-active:text-teal-300">
+                    <h2 className="text-md font-medium text-gray-200 group-hover/child:text-[#64EBD6]">
                       {project.title}
                     </h2>
                     {project?.link && (
                       <MdArrowOutward
-                        className="mt-1.5 group-active:text-teal-300 group-hover:text-teal-300 
-                      group-hover:-translate-y-1 group-hover:translate-x-1.5 transition duration-100 ease-in"
+                        className="mt-1.5 group-active:text-teal-300 group-hover/child:text-teal-300 
+                      group-hover/child:-translate-y-1 group-hover/child:translate-x-1.5 transition duration-100 ease-in"
                       />
                     )}
                   </div>

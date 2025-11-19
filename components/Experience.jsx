@@ -83,7 +83,7 @@ function Experience({ slideScreen }) {
             target="_blank"
             key={idx}
             className="group/child flex flex-col md:flex-row md:gap-15 opacity-90 
-                    group-hover/parent:opacity-40 hover:!opacity-90 md:px-6 md:py-4 rounded-sm 
+                    group-hover/parent:opacity-45 hover:!opacity-90 md:px-6 md:py-4 rounded-sm 
                     transition-all duration-300 ease-out hover:cursor-pointer hover:md:shadow-lg 
                     hover:md:bg-cyan-100/[0.038]"
           >
@@ -96,7 +96,7 @@ function Experience({ slideScreen }) {
             <div className="flex flex-col justify-start w-full">
               {/* Title + Arrow */}
               <div className="flex gap-2 justify-start items-center">
-                <h2 className="text-md font-medium text-white group-hover/child:text-teal-300">
+                <h2 className="text-md font-medium text-white group-hover/child:text-[#64EBD6]">
                   {work.role} • {work.org}
                 </h2>
 
