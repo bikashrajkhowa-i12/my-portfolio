@@ -91,8 +91,8 @@ function Experience({ slideScreen }) {
             key={idx}
             className="group/child flex flex-col md:flex-row md:gap-15 opacity-90 
                     group-hover/parent:opacity-40 hover:!opacity-100 md:p-5 rounded-md 
-                    transition-all duration-200 ease-out hover:cursor-pointer hover:md:shadow-lg 
-                    hover:md:bg-gradient-to-br from-teal-300/5 via-gray-500/10 to-slate-800/25"
+                    transition-all duration-300 ease-in-out hover:cursor-pointer hover:md:shadow-lg 
+                    hover:md:bg-gray-300/5"
           >
             {/* Duration */}
             <h2 className="text-xs font-semibold text-gray-500 w-1/4 mt-2">

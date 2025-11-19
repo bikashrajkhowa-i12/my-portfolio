@@ -37,7 +37,7 @@ function About({ slideScreen }) {
         tool, adapting to different requirements, or finding better ways to
         write clean maintainable code .
       </p>
-      <p className="mb-4 text-gray-400/90">
+      <p className="mb-4 font-light text-gray-300/90">
         Away from the screen, you’ll usually find me playing guitar to unwind,
         gaming for some fun, or out on my bike enjoying the outdoors.
       </p>

@@ -120,7 +120,7 @@ function Footer() {
   return (
     <section id="discover" className="flex flex-col xl:pl-130">
       <div className="pt-20 h-auto bg-inherit">
-        <div className="max-w-2xl mx-auto px-2 py-16 grid md:grid-cols-2 gap-2">
+        <div className="max-w-2xl mx-auto px-2 py-16 grid md:grid-cols-2 gap-10 md:gap-2">
           {/* Intro + Social Links */}
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-gray-200">Get in Touch</h2>
