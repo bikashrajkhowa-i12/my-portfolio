@@ -141,9 +141,10 @@ function Projects({ slideScreen }) {
           return (
             <div
               key={idx}
-              className="group/child flex flex-col md:flex-row md:gap-8 opacity-90 
+              className="group/child flex flex-col md:flex-row md:gap-8 opacity-90
+                        border-t border-transparent hover:!border-cyan-200/10 
                         group-hover/parent:opacity-45 hover:!opacity-90 transition-all 
-                        duration-300 ease-out md:px-6 md:py-4 rounded-sm hover:md:bg-cyan-100/[0.038]
+                        duration-300 ease-out md:px-6 md:py-4 rounded-sm hover:md:bg-teal-100/[0.038]
                         hover:md:shadow-lg"
             >
               {/* Image */}

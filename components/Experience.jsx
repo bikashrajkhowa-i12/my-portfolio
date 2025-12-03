@@ -82,10 +82,10 @@ function Experience({ slideScreen }) {
             href={work.org_website}
             target="_blank"
             key={idx}
-            className="group/child flex flex-col md:flex-row md:gap-15 opacity-90 
-                    group-hover/parent:opacity-45 hover:!opacity-90 md:px-6 md:py-4 rounded-sm 
-                    transition-all duration-300 ease-out hover:cursor-pointer hover:md:shadow-lg 
-                    hover:md:bg-cyan-100/[0.038]"
+            className="group/child flex flex-col md:flex-row md:gap-15 opacity-90 border-t border-transparent
+                    hover:!border-cyan-200/10 group-hover/parent:opacity-45 hover:!opacity-90 md:px-6 md:py-4 
+                    rounded-sm transition-all duration-300 ease-out hover:cursor-pointer hover:md:shadow-lg 
+                    hover:md:bg-teal-100/[0.038]"
           >
             {/* Duration */}
             <h2 className="text-xs font-medium text-gray-400/80 w-1/4 my-1.5">

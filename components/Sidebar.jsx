@@ -27,7 +27,9 @@ function Sidebar() {
       className="absolute top-19 right-8 hidden lg:flex flex-col items-start justify-between p-4 gap-24"
     >
       <div className="space-y-1">
-        <h1 className="text-5xl font-bold text-gray-100">Bikash Rajkhowa</h1>
+        <a className="text-5xl font-bold text-gray-100" href="#about">
+          Bikash Rajkhowa
+        </a>
         <h2 className="text-2xl font-medium text-gray-300 mt-2">
           Software Engineer
         </h2>
@@ -66,6 +68,7 @@ function Sidebar() {
 
               <a
                 aria-label="Scroll to the selected value"
+                title={link.name}
                 href={link.href}
                 onClick={() => setSelectedLink(link.href)}
                 className={`w-full text-xs font-semibold transition-all duration-200 hover:text-cyan-300 tracking-widest ${
